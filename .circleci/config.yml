@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  snyk: snyk/snyk@1.1.2
+  snyk: snyk/snyk@1.7.0
 
 jobs:
   build:
@@ -61,7 +61,7 @@ jobs:
           git config user.name "Misterb91123"
           git add goof/goof-deployment.yaml
           git commit -m "update from circleci to trigger argocd"
-          git push https://$GITHUB_PERSONAL_TOKEN@github.com/Misterb91123/nodejs-goof.git 
+          git push https://$PERSONAL_TOKEN@github.com/Misterb91123/nodejs-goof.git 
 workflows:
   build_and_test:
     jobs:
