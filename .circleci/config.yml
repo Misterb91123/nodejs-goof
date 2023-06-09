@@ -55,7 +55,7 @@ jobs:
     steps:
       - run : |
           TAG=0.1.<< pipeline.number >>
-          git clone https://github.com/Misterb91123/nodejs-goof.git
+          git clone https://github.com/Misterb91123/argocd-goof.git
           cd argocd-goof
           sed -i 's/\(docker-goof\)\(.*\)/\1:'$TAG'/' goof/goof-deployment.yaml
           git config user.email "anehbinda@yahoo.com"
