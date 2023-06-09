@@ -48,7 +48,7 @@ jobs:
         command: | 
           TAG=0.1.<< pipeline.number >>
           snyk auth $SNYK_TOKEN
-          snyk container test jiajunngjj/docker-goof:$TAG --file=./Dockerfile || true
+          snyk container test $DOCKER_USERNAME/docker-goof:$TAG --file=./Dockerfile || true
   trigger_argocd:
     docker:
       - image: cimg/base:2022.04
