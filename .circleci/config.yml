@@ -9,6 +9,11 @@ jobs:
     steps:
       - checkout
       - run: npm install -q
+  install_snyk:
+    steps:
+    - run: 
+        command: |
+          npm install -g snyk 
   snyk_code_test:
     docker:
     - image: snyk/snyk-cli:npm
